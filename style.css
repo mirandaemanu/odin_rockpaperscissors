@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #111;
+}
+
+.header {
+    background: #113;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 50px;
+}
+
+.header-title {
+    font-family: 'Pixelify Sans', cursive;
+    color: rgb(255, 157, 21);
+    font-size: 2.8rem;
+}
+
+.game-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-family: 'Montserrat';
+}
+
+.game-container h2 {
+    font-size: 2rem;
+}
+
+.score-container {
+    display: flex;
+    justify-content: flex-start;
+    text-align: center;
+    gap: 40px;
+    font-size: 1.4rem;
+}
+
+.player-option-display {
+    text-align: center;
+    font-size: 80px;
+    margin: 15px;
+}
+
+.options-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.game-option {
+    font-size: 80px;
+    background: #113;
+    padding: 30px;
+    margin-top: 60px;
+    border-radius: 12px;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    background: #113;
+    color: rgb(255, 157, 21);
+    font-size: 20px;
+}
+
+
+#resultInfo {
+    font-size: 1.5rem;
+}
