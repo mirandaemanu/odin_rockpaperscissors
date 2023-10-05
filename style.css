@@ -15,6 +15,7 @@ body {
     background: #113;
     height: 60px;
     display: flex;
+    justify-content: center;
     align-items: center;
     text-align: center;
     padding: 50px;
@@ -24,6 +25,7 @@ body {
     font-family: 'Pixelify Sans', cursive;
     color: rgb(255, 157, 21);
     font-size: 2.8rem;
+    flex: 1;
 }
 
 .game-container {
@@ -57,16 +59,20 @@ body {
 
 .options-container {
     display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-}
+    justify-content: center;
 
+    gap: 20px;
+    max-width: 600px;
+}
+ 
 .game-option {
-    font-size: 80px;
+    font-size: 5vw;
     background: #113;
     padding: 30px;
     margin-top: 60px;
     border-radius: 12px;
+    flex: 1;
+    text-align: center;
 }
 
 .footer {
@@ -82,4 +88,16 @@ body {
 
 #resultInfo {
     font-size: 1.5rem;
+}
+
+@media(max-width:650px) {
+    .game-option {
+       font-size: 7vw;
+    }
+}
+
+@media(max-width: 460px) {
+    .header-title {
+        font-size: 2rem;
+    }
 }
