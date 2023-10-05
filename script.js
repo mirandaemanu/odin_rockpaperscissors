@@ -30,11 +30,24 @@ const compareOptions = (playerOption, computerOption) => {
         if(computerOption == 'rock') { return 1; }
         if(computerOption == 'scissors') { return -1 }
 
+    }
     if(playerOption == 'scissors') {
         if(computerOption == 'paper') { return 1; }
         if(computerOption == 'rock') { return -1 }
     }
+
 }
+
+const checkWinner = () => {
+    if(playerScoreCounter == 5 || computerScoreCounter == 5) {
+        let result = (playerScoreCounter == 5) ? 'win':'lost';
+
+        resultInfo.textContent = `You ${result}! Let's play again 🎮`;
+        playerScore.textContent = '?';
+        playerScoreCounter = 0;
+        computerScore.textContent = '?';
+        computerScoreCounter = 0;
+    } 
 }
 
 const getEmogiForMove = (move) => {
@@ -68,6 +81,7 @@ const playGame = (playerOpt) => {
 
     playerScore.textContent = playerScoreCounter;
     computerScore.textContent = computerScoreCounter;
+    checkWinner();
 }
 
 document.querySelector('#rock').addEventListener('click', () => playGame('rock'));
